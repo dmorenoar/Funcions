@@ -35,24 +35,30 @@ public class Program
 
 
     }
-
+    
+    //Rep arguments però no retorna
     public static void ShowMessage(string message)
     {
         Console.WriteLine(message);
     }
 
     const string MessageAdmin = "Admin mode enabled.";
+    
+    //Ni rep arguments ni retorna
     public static void AdminModeEnabled()
     {
         Console.WriteLine(MessageAdmin);
     }
+    
+    //Retorna però no rep arguments
     public static bool GetRandomCriticalChance()
     {
         Random rand = new Random();
-        int chance = rand.Next(1, 101); // Generates a number between 1 and 100
-        return chance <= 25; // 25% chance for critical hit
+        int chance = rand.Next(1, 101);
+        return chance <= 25;
     }
-
+    
+    //Retorna i rep arguments
     public static string GetChampionRole(string champion)
     {
         const string MessageUnknownChampion = "Unknown champion.";
@@ -118,3 +124,4 @@ public class Program
         return op;
     }
 }
+
