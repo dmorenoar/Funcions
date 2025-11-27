@@ -21,7 +21,7 @@ public class Program
 
         do
         {
-            op = Menu(ref op);
+            Menu(ref op);
 
             switch (op)
             {
@@ -76,7 +76,7 @@ public class Program
     de manera que podrà modificar el contingut de la variable (ja que el que es passa és l'adreça de memòria).
     En aquest cas, la variable op és modificada dins de la funció Menu i aquest canvi es reflecteix fora de la funció.
      */
-    public static int Menu(ref int op)
+    public static void Menu(ref int op)
     {
         const string MessageChooseAnOption = "Choose an option: \n";
         const string MessageCheckCredit = "1 - Check credit card \n";
@@ -97,7 +97,6 @@ public class Program
             Console.WriteLine(PromptMenu);
 
         } while (!int.TryParse(Console.ReadLine(), out op) || (op < -2 || op > 3));
-
-        return op;
     }
 }
+
